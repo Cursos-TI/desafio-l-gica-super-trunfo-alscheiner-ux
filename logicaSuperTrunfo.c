@@ -1,6 +1,3 @@
-A seguir está uma versão **funcional em C**, mantendo o raciocínio do seu esqueleto (cadastro + comparação + exibição), porém **incrementada** com funções, validação básica de entrada, menu para escolher atributo, regra de desempate e opção de “Super Poder” (soma normalizada simples).
-
-```c
 #include <stdio.h>
 #include <string.h>
 
@@ -320,18 +317,3 @@ void menuAtributos(void) {
     printf("6 - PIB per Capita\n");
     printf("7 - Super Poder (didatico)\n");
 }
-```
-
-### O que foi incrementado (em termos de “funções” e funcionalidade)
-
-* **STRUCT Carta** para organizar dados.
-* **FUNÇÕES DE ENTRADA** robustas (`lerString`, `lerULong`, `lerDouble`, etc.) com limpeza de buffer.
-* **FUNÇÕES DERIVADAS**: `densidadePopulacional()` e `pibPerCapita()`.
-* **MENU DE COMPARAÇÃO** com escolha de atributo.
-* **REGRA DE COMPARAÇÃO** centralizada (`compararPorAtributo`), incluindo caso “menor vence”.
-* **DESEMPATE PADRÃO** (`desempatePadrao`).
-* **SUPERVISUALIZAÇÃO**: exibe carta completa com valores calculados.
-* **SUPER PODER** (didático) agregando atributos.
-
-Se você quiser que eu incremente ainda mais dentro do mesmo raciocínio (por exemplo: comparar **dois atributos na sequência**, modo “melhor de 3”, salvar em arquivo, ou cadastrar um baralho com N cidades), eu consigo estender mantendo o mesmo padrão deste código.
-
